@@ -4,9 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js" 
+  integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg==" 
+  crossorigin="anonymous"></script>
+  <script src="main.js" defer></script>
   <title>Notes</title>
 </head>
-<body>
-  
+<body class="mar-md">
+  <header>
+    <h1>Notes</h1>
+  </header>
+  <form id="notes-form" class="form">
+    <div class="input-field">
+      <label for="notes-input"></label>
+      <textarea id="notes-input" name="notes" placeholder="Start taking notes here!"></textarea>
+    </div>
+    <div class="notes field">
+      <button type="submit" class="button-lg">New Note</button>
+    </div>
+  </form>
+  <section class="new-note">
+    <class id="new-note"></class>
+  </section>
 </body>
 </html>
