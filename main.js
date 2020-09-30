@@ -6,14 +6,12 @@ const renderNote = (data) => {
     const notesItemEl = document.createElement('div');
     notesItemEl.dataset.id = data.id;
     notesItemEl.id = `note-${data.id}`;
-
     notesItemEl.innerHTML = `
-        <div class="note-item-title">
+        <div class="note-item-title" contenteditable="true">
             ${data.notesItem}
         </div>
         <div class="note-item-button-wrapper">
             <button class="delete">delete</button>
-            <button class="edit">edit</button>
         </div>
     `;
 
@@ -46,9 +44,17 @@ const createNote = () => {
     })
 }
 
-const updateNote = () => {
-
-}
+// const updateNote = (ex) => {
+//     fetch(url + '/' + ex, {
+//         method: 'PUT',
+//         headers: {'Content-Type': 'application/json'},
+//         body: JSON.stringify({})
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//         const noteToAdd = document.querySelector(`#note-${id}`);
+//     })
+// }
 
 const deleteNote = (id) => {
     fetch(url + '/' + id, {
@@ -56,7 +62,7 @@ const deleteNote = (id) => {
         })
         .then(res => res.json())
         .then(data => {
-            const itemToRemove = document.querySelector(`#note-${id}`)
+            const itemToRemove = document.querySelector(`#note-${id}`);
             itemToRemove.remove();
         })
 }

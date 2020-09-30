@@ -1,5 +1,23 @@
+body {
+    background-color: rgb(255, 255, 97);
+}
+
 #notes-list {
     display: flex;
     flex-direction: column-reverse;
     padding-top: 25px;
+}
+
+.note-item-title {
+    margin: 5px;
+}
+
+.delete {
+    padding: 0px;
+}
+
+.note-item-title {
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
