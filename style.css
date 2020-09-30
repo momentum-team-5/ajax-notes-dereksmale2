@@ -1,0 +1,5 @@
+#notes-list {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 25px;
+}
